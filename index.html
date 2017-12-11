@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>JSON CRUD</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Bootstrap -->
+		<link href="ui/css/bootstrap.min.css" rel="stylesheet" media="screen">		
+		<link href="ui/css/crud.css" rel="stylesheet" media="screen">
+	</head>
+
+	<body>
+		<div class="container">			
+			
+			<div class="jumbotron">
+				<h1>JSON CRUD</h1>        
+			</div>
+			
+			<div class="navbar">
+	<div class="navbar-inner">    
+		<ul class="nav">
+			<li><a href="javascript:void(0);" id="user_list"><i class="icon-th icon-black"></i> Read</a></li>
+			<li><a href="javascript:void(0);" id="create_user_form"><i class="icon-plus-sign icon-black"></i> Create</a></li>		  
+		</ul>
+	</div>
+</div>
+
+<div id="indicator" style="display: none; text-align: center;" class="loading_img">
+	<img src="ui/img/indicator.gif"/>
+</div>
+
+<div id="content"></div>
+
+<div id="delete_confirm_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-header">		
+		<h3 id="myModalLabel">Delete User</h3>
+	</div>
+	
+	<div class="modal-body">
+		<p>Are you sure to delete this user?</p>
+	</div>
+	<div class="modal-footer">
+		<input type="hidden" id="user_id" value="" />
+		<button class="btn" data-dismiss="modal" aria-hidden="true">No</button>
+		<button class="btn btn-primary delete">Yes</button>
+	</div>
+</div>
+
+		</div>
+
+		<script src="jquery-3.2.1.min.js"></script>
+		<script src="ui/js/bootstrap.min.js"></script>
+		<script src="ui/js/custom.js"></script>
+	</body>
+</html>
